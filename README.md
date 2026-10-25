@@ -1,33 +1,37 @@
 # Mission-Advance-Backend
 **Mission 1 — FSD-20 (Back-End Developer Node.js)**  
+**Student:** Muhammad Burhanudin (20071)  
 **Projek:** Perancangan Basis Data Aplikasi Streaming Film "Chill"
 
 Repository ini berisi rancangan basis data lengkap, dokumentasi teknis, skrip DDL SQL, serta Entity Relationship Diagram (ERD) untuk aplikasi *Movie Streaming Platform* **"Chill"** berdasarkan analisis desain antarmuka Figma.
 
 ---
 
-## 📁 Daftar Berkas Projek
+## 📁 Berkas Dokumentasi & Pengumpulan Misi
 
-1. 📄 **[`Dokumentasi_Skema_Database_Mission_1.docx`](./Dokumentasi_Skema_Database_Mission_1.docx)**  
-   Dokumen resmi acuan pengumpulan tugas (format Microsoft Word / siap dibuka langsung di Google Docs).
+1. 📕 **[`Muhammad Burhanudin_20071_ Mission Advance Backend.pdf`](./Muhammad%20Burhanudin_20071_%20Mission%20Advance%20Backend.pdf)**  
+   **Dokumen Laporan Resmi Pengumpulan Misi (PDF)** yang telah diekspor dan siap dikumpulkan ke Google Classroom / Formulir Misi.
 
-2. 📝 **[`DOKUMENTASI_DATABASE_MISSION_1.md`](./DOKUMENTASI_DATABASE_MISSION_1.md)**  
+2. 🖼️ **[`erd_chill_movie_app.jpg`](./erd_chill_movie_app.jpg)** & **[`erd_chill_movie_app.svg`](./erd_chill_movie_app.svg)**  
+   Gambar Entity Relationship Diagram (ERD) resolusi tinggi untuk dilampirkan terpisah.
+
+3. 📄 **[`Dokumentasi_Skema_Database_Mission_1.docx`](./Dokumentasi_Skema_Database_Mission_1.docx)**  
+   Dokumen Word resmi template acuan tugas (dapat dibuka langsung di Google Docs).
+
+4. 📝 **[`DOKUMENTASI_DATABASE_MISSION_1.md`](./DOKUMENTASI_DATABASE_MISSION_1.md)**  
    Dokumentasi teknis lengkap berbasis Markdown yang mencakup:
    - **Naming Convention** (Aturan penamaan objek DB dan 4 alasan teknis).
    - **Daftar Tabel & Relasi** (8 entitas brief + 1 junction table, kardinalitas, catatan arsitektur).
-   - **Justifikasi Tipe Data** (Setiap kolom pada seluruh tabel dengan analisis batas nilai dan efisiensi memori).
-   - **Strategi Indexing** (Single, composite, unique index beserta alasan query dan B-Tree optimization).
+   - **Justifikasi Tipe Data** (Setiap kolom pada seluruh 9 tabel dengan analisis batas nilai dan efisiensi memori).
+   - **Strategi Indexing** (Single, composite, unique index beserta optimasi B-Tree).
 
-3. 📐 **[`erd_chill_movie_app.drawio`](./erd_chill_movie_app.drawio)**  
+5. 📐 **[`erd_chill_movie_app.drawio`](./erd_chill_movie_app.drawio)**  
    Berkas diagram native Draw.io (dapat dibuka dan diedit di [app.diagrams.net](https://app.diagrams.net)).
 
-4. 🖼️ **[`erd_chill_movie_app.svg`](./erd_chill_movie_app.svg)**  
-   Gambar vektor Entity Relationship Diagram (ERD) resolusi tinggi.
+6. 🗄️ **[`schema.sql`](./schema.sql)**  
+   Skrip DDL SQL lengkap (MySQL 8.0+ / MariaDB) yang berisi definisi tabel, *foreign key constraints*, *composite unique indexes*, dan data *seeder* awal.
 
-5. 🗄️ **[`schema.sql`](./schema.sql)**  
-   Skrip DDL SQL lengkap (MySQL 8.0+ / MariaDB) yang berisi definisi tabel, *foreign key constraints*, *composite unique indexes*, dan data *seeder* dummy awal.
-
-6. 🌐 **[`preview_erd.html`](./preview_erd.html)**  
+7. 🌐 **[`preview_erd.html`](./preview_erd.html)**  
    Halaman antarmuka interaktif lokal untuk mempratinjau ERD dan mengunduh berkas yang dibutuhkan.
 
 ---
