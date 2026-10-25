@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-25T04:20:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="erd_chill" name="ERD Chill Movie App">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="950" background="#0f172a" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title Header -->
+        <mxCell id="title_header" value="&lt;b style=&quot;font-size:22px;color:#38bdf8;&quot;&gt;ENTITY RELATIONSHIP DIAGRAM (ERD) — CHILL MOVIE APP&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#94a3b8;font-size:12px;&quot;&gt;Mission 1 — FSD-20 (Back-End Developer Node.js) | Database: chill_movie_db&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="600" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- USERS TABLE -->
+        <mxCell id="t_users" value="users (User)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#38bdf8;fontColor=#f8fafc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="220" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="u_1" value="&lt;b&gt;PK&lt;/b&gt; id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=#334155;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#38bdf8;" vertex="1" parent="t_users">
+          <mxGeometry y="30" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="u_2" value="full_name : VARCHAR(100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_users">
+          <mxGeometry y="55" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="u_3" value="&lt;b&gt;UQ&lt;/b&gt; email : VARCHAR(150)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_users">
+          <mxGeometry y="80" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="u_4" value="password_hash : VARCHAR(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_users">
+          <mxGeometry y="105" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="u_5" value="avatar_url : VARCHAR(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_users">
+          <mxGeometry y="130" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="u_6" value="role : ENUM('admin','user')" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_users">
+          <mxGeometry y="155" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="u_7" value="is_active : BOOLEAN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_users">
+          <mxGeometry y="180" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="u_8" value="created_at / updated_at : TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#94a3b8;fontStyle=2;" vertex="1" parent="t_users">
+          <mxGeometry y="205" width="220" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- PACKAGES TABLE -->
+        <mxCell id="t_packages" value="packages (Paket)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#10b981;fontColor=#f8fafc;" vertex="1" parent="1">
+          <mxGeometry x="720" y="100" width="230" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_1" value="&lt;b&gt;PK&lt;/b&gt; id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=#334155;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#10b981;" vertex="1" parent="t_packages">
+          <mxGeometry y="30" width="230" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_2" value="name : VARCHAR(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_packages">
+          <mxGeometry y="55" width="230" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_3" value="&lt;b&gt;UQ&lt;/b&gt; slug : VARCHAR(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_packages">
+          <mxGeometry y="80" width="230" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_4" value="price : DECIMAL(12,2)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_packages">
+          <mxGeometry y="105" width="230" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_5" value="duration_days : SMALLINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_packages">
+          <mxGeometry y="130" width="230" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_6" value="max_resolution : VARCHAR(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_packages">
+          <mxGeometry y="155" width="230" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_7" value="max_screens : TINYINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_packages">
+          <mxGeometry y="180" width="230" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_8" value="is_active : BOOLEAN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#94a3b8;fontStyle=2;" vertex="1" parent="t_packages">
+          <mxGeometry y="205" width="230" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- ORDERS TABLE -->
+        <mxCell id="t_orders" value="orders (Order)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#f59e0b;fontColor=#f8fafc;" vertex="1" parent="1">
+          <mxGeometry x="380" y="100" width="240" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_1" value="&lt;b&gt;PK&lt;/b&gt; id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=#334155;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f59e0b;" vertex="1" parent="t_orders">
+          <mxGeometry y="30" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_2" value="&lt;b&gt;UQ&lt;/b&gt; order_code : VARCHAR(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_orders">
+          <mxGeometry y="55" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_3" value="&lt;b&gt;FK&lt;/b&gt; user_id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#38bdf8;" vertex="1" parent="t_orders">
+          <mxGeometry y="80" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_4" value="&lt;b&gt;FK&lt;/b&gt; package_id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#10b981;" vertex="1" parent="t_orders">
+          <mxGeometry y="105" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_5" value="total_amount : DECIMAL(12,2)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_orders">
+          <mxGeometry y="130" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_6" value="status : ENUM('pending','paid',..)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_orders">
+          <mxGeometry y="155" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_7" value="start_date / end_date : TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_orders">
+          <mxGeometry y="180" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_8" value="created_at / updated_at : TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#94a3b8;fontStyle=2;" vertex="1" parent="t_orders">
+          <mxGeometry y="205" width="240" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- PAYMENTS TABLE -->
+        <mxCell id="t_payments" value="payments (Pembayaran)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#e11d48;fontColor=#f8fafc;" vertex="1" parent="1">
+          <mxGeometry x="380" y="400" width="240" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_1" value="&lt;b&gt;PK&lt;/b&gt; id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=#334155;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e11d48;" vertex="1" parent="t_payments">
+          <mxGeometry y="30" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_2" value="&lt;b&gt;UQ&lt;/b&gt; payment_code : VARCHAR(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_payments">
+          <mxGeometry y="55" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_3" value="&lt;b&gt;FK&lt;/b&gt; order_id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f59e0b;" vertex="1" parent="t_payments">
+          <mxGeometry y="80" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_4" value="payment_method : VARCHAR(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_payments">
+          <mxGeometry y="105" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_5" value="payment_gateway : VARCHAR(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_payments">
+          <mxGeometry y="130" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_6" value="amount : DECIMAL(12,2)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_payments">
+          <mxGeometry y="155" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_7" value="payment_status : ENUM('settlement',..)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_payments">
+          <mxGeometry y="180" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_8" value="paid_at : TIMESTAMP | payload : JSON" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#94a3b8;fontStyle=2;" vertex="1" parent="t_payments">
+          <mxGeometry y="205" width="240" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- MY_LISTS TABLE (Daftar Saya) -->
+        <mxCell id="t_my_lists" value="my_lists (Daftar Saya)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#a855f7;fontColor=#f8fafc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ml_1" value="&lt;b&gt;PK&lt;/b&gt; id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=#334155;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#a855f7;" vertex="1" parent="t_my_lists">
+          <mxGeometry y="30" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ml_2" value="&lt;b&gt;FK, UQ1&lt;/b&gt; user_id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#38bdf8;" vertex="1" parent="t_my_lists">
+          <mxGeometry y="55" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ml_3" value="&lt;b&gt;FK, UQ2&lt;/b&gt; film_id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#ec4899;" vertex="1" parent="t_my_lists">
+          <mxGeometry y="80" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ml_4" value="created_at : TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#94a3b8;fontStyle=2;" vertex="1" parent="t_my_lists">
+          <mxGeometry y="105" width="220" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- FILMS TABLE (Series/Film) -->
+        <mxCell id="t_films" value="films (Series/Film)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#ec4899;fontColor=#f8fafc;" vertex="1" parent="1">
+          <mxGeometry x="720" y="400" width="240" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_1" value="&lt;b&gt;PK&lt;/b&gt; id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=#334155;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#ec4899;" vertex="1" parent="t_films">
+          <mxGeometry y="30" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_2" value="title : VARCHAR(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_films">
+          <mxGeometry y="55" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_3" value="&lt;b&gt;UQ&lt;/b&gt; slug : VARCHAR(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_films">
+          <mxGeometry y="80" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_4" value="type : ENUM('movie','series')" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_films">
+          <mxGeometry y="105" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_5" value="synopsis : TEXT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_films">
+          <mxGeometry y="130" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_6" value="release_year : SMALLINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_films">
+          <mxGeometry y="155" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_7" value="age_rating : VARCHAR(10)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_films">
+          <mxGeometry y="180" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_8" value="rating : DECIMAL(3,1)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_films">
+          <mxGeometry y="205" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_9" value="poster_url / trailer_url : VARCHAR" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_films">
+          <mxGeometry y="230" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flm_10" value="is_premium / is_published : BOOLEAN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#94a3b8;fontStyle=2;" vertex="1" parent="t_films">
+          <mxGeometry y="255" width="240" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- EPISODES TABLE (Episode/Movie) -->
+        <mxCell id="t_episodes" value="episodes (Episode/Movie)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#06b6d4;fontColor=#f8fafc;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="400" width="240" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_1" value="&lt;b&gt;PK&lt;/b&gt; id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=#334155;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#06b6d4;" vertex="1" parent="t_episodes">
+          <mxGeometry y="30" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_2" value="&lt;b&gt;FK&lt;/b&gt; film_id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#ec4899;" vertex="1" parent="t_episodes">
+          <mxGeometry y="55" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_3" value="title : VARCHAR(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_episodes">
+          <mxGeometry y="80" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_4" value="season_number : SMALLINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_episodes">
+          <mxGeometry y="105" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_5" value="episode_number : SMALLINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_episodes">
+          <mxGeometry y="130" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_6" value="duration_minutes : SMALLINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_episodes">
+          <mxGeometry y="155" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_7" value="video_url : VARCHAR(500)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_episodes">
+          <mxGeometry y="180" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_8" value="thumbnail_url : VARCHAR(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_episodes">
+          <mxGeometry y="205" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_9" value="release_date : DATE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#94a3b8;fontStyle=2;" vertex="1" parent="t_episodes">
+          <mxGeometry y="230" width="240" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- FILM_GENRES TABLE (Junction M:N) -->
+        <mxCell id="t_film_genres" value="film_genres (Junction)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#8b5cf6;fontColor=#f8fafc;" vertex="1" parent="1">
+          <mxGeometry x="720" y="740" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="fg_1" value="&lt;b&gt;PK&lt;/b&gt; id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=#334155;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#8b5cf6;" vertex="1" parent="t_film_genres">
+          <mxGeometry y="30" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="fg_2" value="&lt;b&gt;FK, UQ1&lt;/b&gt; film_id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#ec4899;" vertex="1" parent="t_film_genres">
+          <mxGeometry y="55" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="fg_3" value="&lt;b&gt;FK, UQ2&lt;/b&gt; genre_id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#14b8a6;" vertex="1" parent="t_film_genres">
+          <mxGeometry y="80" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="fg_4" value="created_at : TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#94a3b8;fontStyle=2;" vertex="1" parent="t_film_genres">
+          <mxGeometry y="105" width="240" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- GENRES TABLE -->
+        <mxCell id="t_genres" value="genres (Genre)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#14b8a6;fontColor=#f8fafc;" vertex="1" parent="1">
+          <mxGeometry x="380" y="740" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="gn_1" value="&lt;b&gt;PK&lt;/b&gt; id : BIGINT UNSIGNED" style="text;strokeColor=none;fillColor=#334155;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#14b8a6;" vertex="1" parent="t_genres">
+          <mxGeometry y="30" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="gn_2" value="&lt;b&gt;UQ&lt;/b&gt; name : VARCHAR(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_genres">
+          <mxGeometry y="55" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="gn_3" value="&lt;b&gt;UQ&lt;/b&gt; slug : VARCHAR(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e2e8f0;" vertex="1" parent="t_genres">
+          <mxGeometry y="80" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="gn_4" value="description : TEXT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#94a3b8;fontStyle=2;" vertex="1" parent="t_genres">
+          <mxGeometry y="105" width="240" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- RELATION CONNECTORS -->
+
+        <!-- users (1) -> (N) orders -->
+        <mxCell id="edge_users_orders" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#38bdf8;strokeWidth=2;fontColor=#38bdf8;labelBackgroundColor=#0f172a;" edge="1" parent="1" source="u_1" target="ord_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- packages (1) -> (N) orders -->
+        <mxCell id="edge_packages_orders" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#10b981;strokeWidth=2;fontColor=#10b981;labelBackgroundColor=#0f172a;" edge="1" parent="1" source="pkg_1" target="ord_4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- orders (1) -> (N) payments -->
+        <mxCell id="edge_orders_payments" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f59e0b;strokeWidth=2;fontColor=#f59e0b;labelBackgroundColor=#0f172a;" edge="1" parent="1" source="ord_1" target="pay_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- users (1) -> (N) my_lists -->
+        <mxCell id="edge_users_mylists" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#38bdf8;strokeWidth=2;fontColor=#38bdf8;labelBackgroundColor=#0f172a;" edge="1" parent="1" source="u_1" target="ml_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- films (1) -> (N) my_lists -->
+        <mxCell id="edge_films_mylists" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ec4899;strokeWidth=2;fontColor=#ec4899;labelBackgroundColor=#0f172a;" edge="1" parent="1" source="flm_1" target="ml_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- films (1) -> (N) episodes -->
+        <mxCell id="edge_films_episodes" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ec4899;strokeWidth=2;fontColor=#ec4899;labelBackgroundColor=#0f172a;" edge="1" parent="1" source="flm_1" target="ep_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- films (1) -> (N) film_genres -->
+        <mxCell id="edge_films_filmgenres" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ec4899;strokeWidth=2;fontColor=#ec4899;labelBackgroundColor=#0f172a;" edge="1" parent="1" source="flm_1" target="fg_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- genres (1) -> (N) film_genres -->
+        <mxCell id="edge_genres_filmgenres" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#14b8a6;strokeWidth=2;fontColor=#14b8a6;labelBackgroundColor=#0f172a;" edge="1" parent="1" source="gn_1" target="fg_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

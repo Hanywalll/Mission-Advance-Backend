@@ -1,0 +1,401 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 980" width="100%" height="100%" style="background-color: #0b1120; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b" />
+    </marker>
+    <marker id="arrow-pink" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ec4899" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#14b8a6" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <g transform="translate(40, 25)">
+    <text x="0" y="28" font-size="24" font-weight="800" fill="url(#headerGrad)" letter-spacing="0.5">ENTITY RELATIONSHIP DIAGRAM (ERD) — CHILL MOVIE APP</text>
+    <text x="0" y="52" font-size="13" font-weight="500" fill="#94a3b8">Mission 1 — FSD-20 (Back-End Developer Node.js) | Relational Schema: 8 Core Entities + 1 Junction Table</text>
+  </g>
+
+  <!-- ================= RELATIONAL CONNECTORS (LINES & LABELS) ================= -->
+  <!-- users (1) -> (N) orders -->
+  <path d="M 280 180 L 370 180" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="none" marker-end="url(#arrow)" fill="none"/>
+  <rect x="305" y="166" width="40" height="18" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+  <text x="325" y="179" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle">1 : N</text>
+
+  <!-- packages (1) -> (N) orders -->
+  <path d="M 710 180 L 620 180" stroke="#10b981" stroke-width="2.5" fill="none" marker-end="url(#arrow-green)"/>
+  <rect x="645" y="166" width="40" height="18" rx="4" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+  <text x="665" y="179" font-size="10" font-weight="700" fill="#10b981" text-anchor="middle">1 : N</text>
+
+  <!-- orders (1) -> (N) payments -->
+  <path d="M 495 345 L 495 410" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#arrow-amber)"/>
+  <rect x="502" y="370" width="40" height="18" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+  <text x="522" y="383" font-size="10" font-weight="700" fill="#f59e0b" text-anchor="middle">1 : N</text>
+
+  <!-- users (1) -> (N) my_lists -->
+  <path d="M 160 345 L 160 420" stroke="#38bdf8" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <rect x="168" y="375" width="40" height="18" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+  <text x="188" y="388" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle">1 : N</text>
+
+  <!-- films (1) -> (N) my_lists -->
+  <path d="M 710 500 L 280 500" stroke="#ec4899" stroke-width="2.5" fill="none" marker-end="url(#arrow-pink)"/>
+  <rect x="320" y="489" width="40" height="18" rx="4" fill="#1e293b" stroke="#ec4899" stroke-width="1"/>
+  <text x="340" y="502" font-size="10" font-weight="700" fill="#ec4899" text-anchor="middle">1 : N</text>
+
+  <!-- films (1) -> (N) episodes -->
+  <path d="M 950 500 L 1020 500" stroke="#ec4899" stroke-width="2.5" fill="none" marker-end="url(#arrow-pink)"/>
+  <rect x="965" y="489" width="40" height="18" rx="4" fill="#1e293b" stroke="#ec4899" stroke-width="1"/>
+  <text x="985" y="502" font-size="10" font-weight="700" fill="#ec4899" text-anchor="middle">1 : N</text>
+
+  <!-- films (1) -> (N) film_genres -->
+  <path d="M 830 705 L 830 750" stroke="#ec4899" stroke-width="2.5" fill="none" marker-end="url(#arrow-pink)"/>
+  <rect x="838" y="718" width="40" height="18" rx="4" fill="#1e293b" stroke="#ec4899" stroke-width="1"/>
+  <text x="858" y="731" font-size="10" font-weight="700" fill="#ec4899" text-anchor="middle">1 : N</text>
+
+  <!-- genres (1) -> (N) film_genres -->
+  <path d="M 620 830 L 710 830" stroke="#14b8a6" stroke-width="2.5" fill="none" marker-end="url(#arrow-teal)"/>
+  <rect x="645" y="819" width="40" height="18" rx="4" fill="#1e293b" stroke="#14b8a6" stroke-width="1"/>
+  <text x="665" y="832" font-size="10" font-weight="700" fill="#14b8a6" text-anchor="middle">1 : N</text>
+
+
+  <!-- ================= ENTITY CARDS ================= -->
+
+  <!-- 1. USERS -->
+  <g transform="translate(40, 95)" filter="url(#shadow)">
+    <rect width="240" height="245" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="240" height="34" rx="8" fill="#0f172a"/>
+    <rect y="26" width="240" height="8" fill="#0f172a"/>
+    <text x="12" y="23" font-size="14" font-weight="700" fill="#38bdf8">users (User)</text>
+    
+    <g transform="translate(12, 54)">
+      <text x="0" y="0" font-size="11" font-weight="700" fill="#eab308">PK</text>
+      <text x="24" y="0" font-size="11" font-weight="600" fill="#f8fafc">id</text>
+      <text x="110" y="0" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="24" font-size="11" font-weight="600" fill="#f8fafc">full_name</text>
+      <text x="110" y="24" font-size="10" fill="#94a3b8">VARCHAR(100)</text>
+
+      <text x="0" y="48" font-size="11" font-weight="700" fill="#06b6d4">UQ</text>
+      <text x="24" y="48" font-size="11" font-weight="600" fill="#f8fafc">email</text>
+      <text x="110" y="48" font-size="10" fill="#94a3b8">VARCHAR(150)</text>
+
+      <text x="0" y="72" font-size="11" font-weight="600" fill="#f8fafc">password_hash</text>
+      <text x="110" y="72" font-size="10" fill="#94a3b8">VARCHAR(255)</text>
+
+      <text x="0" y="96" font-size="11" font-weight="600" fill="#f8fafc">avatar_url</text>
+      <text x="110" y="96" font-size="10" fill="#94a3b8">VARCHAR(255)</text>
+
+      <text x="0" y="120" font-size="11" font-weight="600" fill="#f8fafc">role</text>
+      <text x="110" y="120" font-size="10" fill="#94a3b8">ENUM('admin','user')</text>
+
+      <text x="0" y="144" font-size="11" font-weight="600" fill="#f8fafc">is_active</text>
+      <text x="110" y="144" font-size="10" fill="#94a3b8">BOOLEAN</text>
+
+      <text x="0" y="168" font-size="10" fill="#64748b" font-style="italic">created_at, updated_at</text>
+      <text x="125" y="168" font-size="10" fill="#64748b">TIMESTAMP</text>
+    </g>
+  </g>
+
+  <!-- 2. ORDERS -->
+  <g transform="translate(370, 95)" filter="url(#shadow)">
+    <rect width="250" height="245" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <rect width="250" height="34" rx="8" fill="#0f172a"/>
+    <rect y="26" width="250" height="8" fill="#0f172a"/>
+    <text x="12" y="23" font-size="14" font-weight="700" fill="#f59e0b">orders (Order)</text>
+
+    <g transform="translate(12, 54)">
+      <text x="0" y="0" font-size="11" font-weight="700" fill="#eab308">PK</text>
+      <text x="24" y="0" font-size="11" font-weight="600" fill="#f8fafc">id</text>
+      <text x="115" y="0" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="24" font-size="11" font-weight="700" fill="#06b6d4">UQ</text>
+      <text x="24" y="24" font-size="11" font-weight="600" fill="#f8fafc">order_code</text>
+      <text x="115" y="24" font-size="10" fill="#94a3b8">VARCHAR(50)</text>
+
+      <text x="0" y="48" font-size="11" font-weight="700" fill="#a855f7">FK</text>
+      <text x="24" y="48" font-size="11" font-weight="600" fill="#38bdf8">user_id</text>
+      <text x="115" y="48" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="72" font-size="11" font-weight="700" fill="#a855f7">FK</text>
+      <text x="24" y="72" font-size="11" font-weight="600" fill="#10b981">package_id</text>
+      <text x="115" y="72" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="96" font-size="11" font-weight="600" fill="#f8fafc">total_amount</text>
+      <text x="115" y="96" font-size="10" fill="#94a3b8">DECIMAL(12,2)</text>
+
+      <text x="0" y="120" font-size="11" font-weight="600" fill="#f8fafc">status</text>
+      <text x="115" y="120" font-size="10" fill="#94a3b8">ENUM('pending',..)</text>
+
+      <text x="0" y="144" font-size="11" font-weight="600" fill="#f8fafc">start / end_date</text>
+      <text x="115" y="144" font-size="10" fill="#94a3b8">TIMESTAMP</text>
+
+      <text x="0" y="168" font-size="10" fill="#64748b" font-style="italic">created_at, updated_at</text>
+      <text x="125" y="168" font-size="10" fill="#64748b">TIMESTAMP</text>
+    </g>
+  </g>
+
+  <!-- 3. PACKAGES -->
+  <g transform="translate(710, 95)" filter="url(#shadow)">
+    <rect width="240" height="245" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <rect width="240" height="34" rx="8" fill="#0f172a"/>
+    <rect y="26" width="240" height="8" fill="#0f172a"/>
+    <text x="12" y="23" font-size="14" font-weight="700" fill="#10b981">packages (Paket)</text>
+
+    <g transform="translate(12, 54)">
+      <text x="0" y="0" font-size="11" font-weight="700" fill="#eab308">PK</text>
+      <text x="24" y="0" font-size="11" font-weight="600" fill="#f8fafc">id</text>
+      <text x="110" y="0" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="24" font-size="11" font-weight="600" fill="#f8fafc">name</text>
+      <text x="110" y="24" font-size="10" fill="#94a3b8">VARCHAR(50)</text>
+
+      <text x="0" y="48" font-size="11" font-weight="700" fill="#06b6d4">UQ</text>
+      <text x="24" y="48" font-size="11" font-weight="600" fill="#f8fafc">slug</text>
+      <text x="110" y="48" font-size="10" fill="#94a3b8">VARCHAR(50)</text>
+
+      <text x="0" y="72" font-size="11" font-weight="600" fill="#f8fafc">price</text>
+      <text x="110" y="72" font-size="10" fill="#94a3b8">DECIMAL(12,2)</text>
+
+      <text x="0" y="96" font-size="11" font-weight="600" fill="#f8fafc">duration_days</text>
+      <text x="110" y="96" font-size="10" fill="#94a3b8">SMALLINT UNSIGNED</text>
+
+      <text x="0" y="120" font-size="11" font-weight="600" fill="#f8fafc">max_resolution</text>
+      <text x="110" y="120" font-size="10" fill="#94a3b8">VARCHAR(20)</text>
+
+      <text x="0" y="144" font-size="11" font-weight="600" fill="#f8fafc">max_screens</text>
+      <text x="110" y="144" font-size="10" fill="#94a3b8">TINYINT UNSIGNED</text>
+
+      <text x="0" y="168" font-size="10" fill="#64748b" font-style="italic">is_active, timestamps</text>
+      <text x="125" y="168" font-size="10" fill="#64748b">BOOLEAN / TS</text>
+    </g>
+  </g>
+
+  <!-- 4. MY_LISTS (Daftar Saya) -->
+  <g transform="translate(40, 420)" filter="url(#shadow)">
+    <rect width="240" height="170" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="2"/>
+    <rect width="240" height="34" rx="8" fill="#0f172a"/>
+    <rect y="26" width="240" height="8" fill="#0f172a"/>
+    <text x="12" y="23" font-size="14" font-weight="700" fill="#a855f7">my_lists (Daftar Saya)</text>
+
+    <g transform="translate(12, 54)">
+      <text x="0" y="0" font-size="11" font-weight="700" fill="#eab308">PK</text>
+      <text x="24" y="0" font-size="11" font-weight="600" fill="#f8fafc">id</text>
+      <text x="110" y="0" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="24" font-size="11" font-weight="700" fill="#a855f7">FK</text>
+      <text x="24" y="24" font-size="11" font-weight="600" fill="#38bdf8">user_id</text>
+      <text x="110" y="24" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="48" font-size="11" font-weight="700" fill="#a855f7">FK</text>
+      <text x="24" y="48" font-size="11" font-weight="600" fill="#ec4899">film_id</text>
+      <text x="110" y="48" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="72" font-size="11" font-weight="600" fill="#f8fafc">created_at</text>
+      <text x="110" y="72" font-size="10" fill="#94a3b8">TIMESTAMP</text>
+
+      <text x="0" y="96" font-size="9.5" fill="#f59e0b" font-style="italic">UNIQUE KEY (user_id, film_id)</text>
+    </g>
+  </g>
+
+  <!-- 5. PAYMENTS (Pembayaran) -->
+  <g transform="translate(370, 410)" filter="url(#shadow)">
+    <rect width="250" height="245" rx="8" fill="#1e293b" stroke="#e11d48" stroke-width="2"/>
+    <rect width="250" height="34" rx="8" fill="#0f172a"/>
+    <rect y="26" width="250" height="8" fill="#0f172a"/>
+    <text x="12" y="23" font-size="14" font-weight="700" fill="#e11d48">payments (Pembayaran)</text>
+
+    <g transform="translate(12, 54)">
+      <text x="0" y="0" font-size="11" font-weight="700" fill="#eab308">PK</text>
+      <text x="24" y="0" font-size="11" font-weight="600" fill="#f8fafc">id</text>
+      <text x="115" y="0" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="24" font-size="11" font-weight="700" fill="#06b6d4">UQ</text>
+      <text x="24" y="24" font-size="11" font-weight="600" fill="#f8fafc">payment_code</text>
+      <text x="115" y="24" font-size="10" fill="#94a3b8">VARCHAR(50)</text>
+
+      <text x="0" y="48" font-size="11" font-weight="700" fill="#a855f7">FK</text>
+      <text x="24" y="48" font-size="11" font-weight="600" fill="#f59e0b">order_id</text>
+      <text x="115" y="48" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="72" font-size="11" font-weight="600" fill="#f8fafc">payment_method</text>
+      <text x="115" y="72" font-size="10" fill="#94a3b8">VARCHAR(50)</text>
+
+      <text x="0" y="96" font-size="11" font-weight="600" fill="#f8fafc">amount</text>
+      <text x="115" y="96" font-size="10" fill="#94a3b8">DECIMAL(12,2)</text>
+
+      <text x="0" y="120" font-size="11" font-weight="600" fill="#f8fafc">payment_status</text>
+      <text x="115" y="120" font-size="10" fill="#94a3b8">ENUM('settlement',..)</text>
+
+      <text x="0" y="144" font-size="11" font-weight="600" fill="#f8fafc">paid_at</text>
+      <text x="115" y="144" font-size="10" fill="#94a3b8">TIMESTAMP NULL</text>
+
+      <text x="0" y="168" font-size="10" fill="#64748b" font-style="italic">payload_response (JSON)</text>
+    </g>
+  </g>
+
+  <!-- 6. FILMS (Series/Film) -->
+  <g transform="translate(710, 400)" filter="url(#shadow)">
+    <rect width="240" height="305" rx="8" fill="#1e293b" stroke="#ec4899" stroke-width="2"/>
+    <rect width="240" height="34" rx="8" fill="#0f172a"/>
+    <rect y="26" width="240" height="8" fill="#0f172a"/>
+    <text x="12" y="23" font-size="14" font-weight="700" fill="#ec4899">films (Series/Film)</text>
+
+    <g transform="translate(12, 54)">
+      <text x="0" y="0" font-size="11" font-weight="700" fill="#eab308">PK</text>
+      <text x="24" y="0" font-size="11" font-weight="600" fill="#f8fafc">id</text>
+      <text x="110" y="0" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="24" font-size="11" font-weight="600" fill="#f8fafc">title</text>
+      <text x="110" y="24" font-size="10" fill="#94a3b8">VARCHAR(255)</text>
+
+      <text x="0" y="48" font-size="11" font-weight="700" fill="#06b6d4">UQ</text>
+      <text x="24" y="48" font-size="11" font-weight="600" fill="#f8fafc">slug</text>
+      <text x="110" y="48" font-size="10" fill="#94a3b8">VARCHAR(255)</text>
+
+      <text x="0" y="72" font-size="11" font-weight="600" fill="#f8fafc">type</text>
+      <text x="110" y="72" font-size="10" fill="#94a3b8">ENUM('movie','series')</text>
+
+      <text x="0" y="96" font-size="11" font-weight="600" fill="#f8fafc">synopsis</text>
+      <text x="110" y="96" font-size="10" fill="#94a3b8">TEXT</text>
+
+      <text x="0" y="120" font-size="11" font-weight="600" fill="#f8fafc">release_year</text>
+      <text x="110" y="120" font-size="10" fill="#94a3b8">SMALLINT UNSIGNED</text>
+
+      <text x="0" y="144" font-size="11" font-weight="600" fill="#f8fafc">age_rating</text>
+      <text x="110" y="144" font-size="10" fill="#94a3b8">VARCHAR(10)</text>
+
+      <text x="0" y="168" font-size="11" font-weight="600" fill="#f8fafc">rating</text>
+      <text x="110" y="168" font-size="10" fill="#94a3b8">DECIMAL(3,1)</text>
+
+      <text x="0" y="192" font-size="11" font-weight="600" fill="#f8fafc">poster_url</text>
+      <text x="110" y="192" font-size="10" fill="#94a3b8">VARCHAR(255)</text>
+
+      <text x="0" y="216" font-size="11" font-weight="600" fill="#f8fafc">is_premium</text>
+      <text x="110" y="216" font-size="10" fill="#94a3b8">BOOLEAN</text>
+
+      <text x="0" y="238" font-size="10" fill="#64748b" font-style="italic">is_published, timestamps</text>
+    </g>
+  </g>
+
+  <!-- 7. EPISODES (Episode/Movie) -->
+  <g transform="translate(1020, 400)" filter="url(#shadow)">
+    <rect width="255" height="265" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="2"/>
+    <rect width="255" height="34" rx="8" fill="#0f172a"/>
+    <rect y="26" width="255" height="8" fill="#0f172a"/>
+    <text x="12" y="23" font-size="14" font-weight="700" fill="#06b6d4">episodes (Episode/Movie)</text>
+
+    <g transform="translate(12, 54)">
+      <text x="0" y="0" font-size="11" font-weight="700" fill="#eab308">PK</text>
+      <text x="24" y="0" font-size="11" font-weight="600" fill="#f8fafc">id</text>
+      <text x="120" y="0" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="24" font-size="11" font-weight="700" fill="#a855f7">FK</text>
+      <text x="24" y="24" font-size="11" font-weight="600" fill="#ec4899">film_id</text>
+      <text x="120" y="24" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="48" font-size="11" font-weight="600" fill="#f8fafc">title</text>
+      <text x="120" y="48" font-size="10" fill="#94a3b8">VARCHAR(255)</text>
+
+      <text x="0" y="72" font-size="11" font-weight="600" fill="#f8fafc">season_number</text>
+      <text x="120" y="72" font-size="10" fill="#94a3b8">SMALLINT UNSIGNED</text>
+
+      <text x="0" y="96" font-size="11" font-weight="600" fill="#f8fafc">episode_number</text>
+      <text x="120" y="96" font-size="10" fill="#94a3b8">SMALLINT UNSIGNED</text>
+
+      <text x="0" y="120" font-size="11" font-weight="600" fill="#f8fafc">duration_minutes</text>
+      <text x="120" y="120" font-size="10" fill="#94a3b8">SMALLINT UNSIGNED</text>
+
+      <text x="0" y="144" font-size="11" font-weight="600" fill="#f8fafc">video_url</text>
+      <text x="120" y="144" font-size="10" fill="#94a3b8">VARCHAR(500)</text>
+
+      <text x="0" y="168" font-size="11" font-weight="600" fill="#f8fafc">thumbnail_url</text>
+      <text x="120" y="168" font-size="10" fill="#94a3b8">VARCHAR(255)</text>
+
+      <text x="0" y="190" font-size="10" fill="#64748b" font-style="italic">release_date, timestamps</text>
+    </g>
+  </g>
+
+  <!-- 8. GENRES (Genre) -->
+  <g transform="translate(370, 750)" filter="url(#shadow)">
+    <rect width="250" height="175" rx="8" fill="#1e293b" stroke="#14b8a6" stroke-width="2"/>
+    <rect width="250" height="34" rx="8" fill="#0f172a"/>
+    <rect y="26" width="250" height="8" fill="#0f172a"/>
+    <text x="12" y="23" font-size="14" font-weight="700" fill="#14b8a6">genres (Genre)</text>
+
+    <g transform="translate(12, 54)">
+      <text x="0" y="0" font-size="11" font-weight="700" fill="#eab308">PK</text>
+      <text x="24" y="0" font-size="11" font-weight="600" fill="#f8fafc">id</text>
+      <text x="110" y="0" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="24" font-size="11" font-weight="700" fill="#06b6d4">UQ</text>
+      <text x="24" y="24" font-size="11" font-weight="600" fill="#f8fafc">name</text>
+      <text x="110" y="24" font-size="10" fill="#94a3b8">VARCHAR(50)</text>
+
+      <text x="0" y="48" font-size="11" font-weight="700" fill="#06b6d4">UQ</text>
+      <text x="24" y="48" font-size="11" font-weight="600" fill="#f8fafc">slug</text>
+      <text x="110" y="48" font-size="10" fill="#94a3b8">VARCHAR(50)</text>
+
+      <text x="0" y="72" font-size="11" font-weight="600" fill="#f8fafc">description</text>
+      <text x="110" y="72" font-size="10" fill="#94a3b8">TEXT</text>
+
+      <text x="0" y="96" font-size="10" fill="#64748b" font-style="italic">created_at, updated_at</text>
+    </g>
+  </g>
+
+  <!-- 9. FILM_GENRES (Junction M:N) -->
+  <g transform="translate(710, 750)" filter="url(#shadow)">
+    <rect width="240" height="175" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="2"/>
+    <rect width="240" height="34" rx="8" fill="#0f172a"/>
+    <rect y="26" width="240" height="8" fill="#0f172a"/>
+    <text x="12" y="23" font-size="14" font-weight="700" fill="#8b5cf6">film_genres (Junction M:N)</text>
+
+    <g transform="translate(12, 54)">
+      <text x="0" y="0" font-size="11" font-weight="700" fill="#eab308">PK</text>
+      <text x="24" y="0" font-size="11" font-weight="600" fill="#f8fafc">id</text>
+      <text x="110" y="0" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="24" font-size="11" font-weight="700" fill="#a855f7">FK</text>
+      <text x="24" y="24" font-size="11" font-weight="600" fill="#ec4899">film_id</text>
+      <text x="110" y="24" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="48" font-size="11" font-weight="700" fill="#a855f7">FK</text>
+      <text x="24" y="48" font-size="11" font-weight="600" fill="#14b8a6">genre_id</text>
+      <text x="110" y="48" font-size="10" fill="#94a3b8">BIGINT UNSIGNED</text>
+
+      <text x="0" y="72" font-size="11" font-weight="600" fill="#f8fafc">created_at</text>
+      <text x="110" y="72" font-size="10" fill="#94a3b8">TIMESTAMP</text>
+
+      <text x="0" y="96" font-size="9.5" fill="#f59e0b" font-style="italic">UNIQUE KEY (film_id, genre_id)</text>
+    </g>
+  </g>
+
+  <!-- Legend at Bottom -->
+  <g transform="translate(40, 940)">
+    <text x="0" y="12" font-size="11" font-weight="600" fill="#94a3b8">Keterangan:</text>
+    <rect x="80" y="2" width="22" height="12" rx="2" fill="#eab308"/>
+    <text x="108" y="12" font-size="10.5" font-weight="600" fill="#f8fafc">Primary Key (PK)</text>
+    
+    <rect x="220" y="2" width="22" height="12" rx="2" fill="#a855f7"/>
+    <text x="248" y="12" font-size="10.5" font-weight="600" fill="#f8fafc">Foreign Key (FK)</text>
+
+    <rect x="360" y="2" width="22" height="12" rx="2" fill="#06b6d4"/>
+    <text x="388" y="12" font-size="10.5" font-weight="600" fill="#f8fafc">Unique Constraint (UQ)</text>
+
+    <text x="560" y="12" font-size="11" fill="#64748b">Setiap relasi 1:N dilengkapi ON DELETE CASCADE / RESTRICT dan B-Tree Indexing.</text>
+  </g>
+</svg>

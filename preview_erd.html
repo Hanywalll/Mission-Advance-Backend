@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission 1 — FSD-20: Berkas Siap Kumpul</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #0b1120;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+    }
+    .header {
+      margin-bottom: 24px;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 26px;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header p {
+      color: #94a3b8;
+      font-size: 15px;
+      margin-top: 6px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      border-color: #38bdf8;
+      transform: translateY(-2px);
+    }
+    .card h3 {
+      font-size: 17px;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .card p {
+      color: #94a3b8;
+      font-size: 13.5px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .btn {
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13.5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-blue { background: #0284c7; color: #fff; }
+    .btn-blue:hover { background: #0369a1; }
+    .btn-emerald { background: #059669; color: #fff; }
+    .btn-emerald:hover { background: #047857; }
+    .btn-amber { background: #d97706; color: #fff; }
+    .btn-amber:hover { background: #b45309; }
+    .btn-purple { background: #7c3aed; color: #fff; }
+    .btn-purple:hover { background: #6d28d9; }
+    
+    .gdoc-guide {
+      background: #111827;
+      border-left: 4px solid #38bdf8;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .gdoc-guide h2 {
+      font-size: 18px;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+    .gdoc-guide ol {
+      padding-left: 20px;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .diagram-container {
+      background: #0f172a;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Mission 1 — FSD-20: Database Design "Chill" Movie App</h1>
+      <p>Berkas telah siap 100% untuk dikumpulkan ke Google Classroom / Formulir Pengumpulan Misi</p>
+    </div>
+
+    <!-- Download Cards -->
+    <div class="card-grid">
+      <!-- 1. Word / Google Doc -->
+      <div class="card">
+        <div>
+          <h3>📄 Dokumen Misi (.docx)</h3>
+          <p>Dokumen lengkap berisi Naming Convention, Relasi Tabel, Tipe Data, dan Indexing. Siap di-upload ke Google Drive & otomatis menjadi Google Docs!</p>
+        </div>
+        <a href="Dokumentasi_Skema_Database_Mission_1.docx" download class="btn btn-blue">
+          📥 Unduh File .DOCX (Google Docs)
+        </a>
+      </div>
+
+      <!-- 2. Draw.io Native -->
+      <div class="card">
+        <div>
+          <h3>📐 File ERD Draw.io (.drawio)</h3>
+          <p>Diagram relasi visual yang dapat dibuka langsung di app.diagrams.net untuk diedit atau diekspor ke PNG/PDF terpisah.</p>
+        </div>
+        <a href="erd_chill_movie_app.drawio" download class="btn btn-emerald">
+          📥 Unduh File .drawio
+        </a>
+      </div>
+
+      <!-- 3. Gambar ERD SVG -->
+      <div class="card">
+        <div>
+          <h3>🖼️ Gambar ERD (SVG / PNG)</h3>
+          <p>Gambar diagram resolusi tinggi siap lampirkan terpisah sesuai petunjuk instruksi pengumpulan tugas.</p>
+        </div>
+        <a href="erd_chill_movie_app.svg" download class="btn btn-amber">
+          📥 Unduh Gambar ERD
+        </a>
+      </div>
+
+      <!-- 4. Skrip SQL -->
+      <div class="card">
+        <div>
+          <h3>🗄️ Skrip Database (schema.sql)</h3>
+          <p>Skrip DDL SQL lengkap siap run di Laragon MySQL/MariaDB atau di-import ke Draw.io (Arrange > Insert > Advanced > SQL).</p>
+        </div>
+        <a href="schema.sql" download class="btn btn-purple">
+          📥 Unduh schema.sql
+        </a>
+      </div>
+    </div>
+
+    <!-- Google Docs Guide -->
+    <div class="gdoc-guide">
+      <h2>🚀 Cara Langsung Menjadikan Google Docs (10 Detik)</h2>
+      <ol>
+        <li>Buka <a href="https://drive.google.com" target="_blank" style="color:#38bdf8; text-decoration: underline;">Google Drive (drive.google.com)</a> di browser kamu.</li>
+        <li>Tarik (drag-and-drop) file <b><code>Dokumentasi_Skema_Database_Mission_1.docx</code></b> yang ada di folder ini ke Google Drive kamu.</li>
+        <li>Klik dua kali file yang baru di-upload di Google Drive. Google Docs akan langsung membukanya dalam format <b>Google Docs resmi</b> dengan seluruh tabel, warna header, dan format yang rapi sempurna!</li>
+        <li>Klik tombol <b>Bagikan (Share)</b> di pojok kanan atas Google Docs untuk mengambil link pengumpulan tugas.</li>
+      </ol>
+    </div>
+
+    <!-- Visualizer -->
+    <h3 style="color:#f8fafc; margin-bottom: 12px; font-size:18px;">Pratinjau Diagram ERD:</h3>
+    <div class="diagram-container">
+      <object data="erd_chill_movie_app.svg" type="image/svg+xml" width="100%" height="980px"></object>
+    </div>
+  </div>
+
+</body>
+</html>
